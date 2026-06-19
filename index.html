@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* ── TOKENS ─────────────────────────────── */
+    /* -- TOKENS ------------------------------- */
     :root {
       --dark:    #00291E;
       --mid:     #004031;
@@ -23,7 +23,7 @@
       --shadow: 0 2px 24px rgba(0,41,30,.10);
     }
 
-    /* ── RESET ──────────────────────────────── */
+    /* -- RESET -------------------------------- */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
     body {
@@ -40,7 +40,7 @@
       font-size: inherit;
     }
 
-    /* ── HEADER ─────────────────────────────── */
+    /* -- HEADER ------------------------------- */
     .site-header {
       position: fixed;
       inset: 0 0 auto;
@@ -81,7 +81,7 @@
     }
     @media (min-width: 480px) { .site-header .evento-badge { display: block; } }
 
-    /* ── HERO ───────────────────────────────── */
+    /* -- HERO --------------------------------- */
     .hero {
       min-height: 100dvh;
       background: linear-gradient(160deg, var(--dark) 0%, var(--mid) 60%, #005942 100%);
@@ -211,7 +211,7 @@
       margin-top: 4px;
     }
 
-    /* ── FORM SECTION ───────────────────────── */
+    /* -- FORM SECTION ------------------------- */
     .form-section {
       padding: 80px 24px;
       max-width: 680px;
@@ -253,7 +253,7 @@
       margin-bottom: 48px;
     }
 
-    /* ── FORM ───────────────────────────────── */
+    /* -- FORM --------------------------------- */
     .form-card {
       background: white;
       border-radius: 24px;
@@ -407,7 +407,7 @@
       margin-top: 14px;
     }
 
-    /* ── SUCCESS ────────────────────────────── */
+    /* -- SUCCESS ------------------------------ */
     #success-screen {
       display: none;
       position: fixed;
@@ -483,7 +483,7 @@
       margin-right: 6px;
     }
 
-    /* ── FOOTER ─────────────────────────────── */
+    /* -- FOOTER ------------------------------- */
     .site-footer {
       padding: 40px 24px;
       text-align: center;
@@ -495,7 +495,7 @@
       line-height: 1.7;
     }
 
-    /* ── LOADING SPINNER ────────────────────── */
+    /* -- LOADING SPINNER ---------------------- */
     .spinner {
       width: 18px; height: 18px;
       border: 2px solid rgba(255,250,250,.3);
@@ -508,7 +508,7 @@
     .btn-submit.loading .btn-text { display: none; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ── UTIL ───────────────────────────────── */
+    /* -- UTIL --------------------------------- */
     .error-msg {
       font-size: 12px;
       color: #c0392b;
@@ -524,13 +524,13 @@
 </head>
 <body>
 
-<!-- ── HEADER ── -->
+<!-- -- HEADER -- -->
 <header class="site-header">
   <div class="logo"><span>EQI</span> Talentos</div>
   <div class="evento-badge" id="header-badge">Evento</div>
 </header>
 
-<!-- ── HERO ── -->
+<!-- -- HERO -- -->
 <section class="hero">
   <div class="hero-orb" aria-hidden="true"></div>
 
@@ -578,7 +578,7 @@
   </div>
 </section>
 
-<!-- ── FORM ── -->
+<!-- -- FORM -- -->
 <section class="form-section" id="formulario">
   <div class="section-eyebrow">
     <span>Banco de Talentos</span>
@@ -595,7 +595,7 @@
       <input type="hidden" id="field-evento" name="evento" value="" />
       <input type="hidden" id="field-data-evento" name="dataEvento" value="" />
 
-      <!-- ─ DADOS PESSOAIS ─ -->
+      <!-- - DADOS PESSOAIS - -->
       <div class="form-group-label">
         <div class="icon">👤</div>
         Dados pessoais
@@ -622,7 +622,7 @@
 
       <div class="divider"></div>
 
-      <!-- ─ FORMAÇÃO ─ -->
+      <!-- - FORMAÇÃO - -->
       <div class="form-group-label">
         <div class="icon">🎓</div>
         Formação acadêmica
@@ -668,7 +668,7 @@
 
       <div class="divider"></div>
 
-      <!-- ─ PROFISSIONAL ─ -->
+      <!-- - PROFISSIONAL - -->
       <div class="form-group-label">
         <div class="icon">💼</div>
         Informações profissionais
@@ -724,7 +724,7 @@
 
       <div class="divider"></div>
 
-      <!-- ─ LGPD ─ -->
+      <!-- - LGPD - -->
       <div class="form-group-label">
         <div class="icon">🔒</div>
         Privacidade & LGPD
@@ -740,7 +740,7 @@
       </div>
       <span class="error-msg" id="lgpd-error" style="margin-top:8px; display:none;">É necessário aceitar para continuar.</span>
 
-      <!-- ─ SUBMIT ─ -->
+      <!-- - SUBMIT - -->
       <button type="submit" class="btn-submit" id="btn-submit">
         <div class="spinner"></div>
         <span class="btn-text">
@@ -753,7 +753,7 @@
   </div>
 </section>
 
-<!-- ── SUCCESS ── -->
+<!-- -- SUCCESS -- -->
 <div id="success-screen" role="dialog" aria-modal="true" aria-label="Cadastro realizado com sucesso">
   <div class="success-icon">
     <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
@@ -779,15 +779,15 @@
 </footer>
 
 <script>
-/* ──────────────────────────────────────────
-   CONFIGURAÇÃO — edite apenas aqui
-   ────────────────────────────────────────── */
-const APPS_SCRIPT_URL = https://script.google.com/macros/s/AKfycbzEXhwAVpC4zysj0ZZuri7Wps1yNlGXpZwdckTVFifbSG4AQz6nENjKuzfUFcgFv0nKyA/exec
+/* ------------------------------------------
+   CONFIGURACAO -- edite apenas aqui
+   ------------------------------------------ */
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/SEU_ID_AQUI/exec';
 
-/* ──────────────────────────────────────────
-   PARÂMETROS DE URL
+/* ------------------------------------------
+   PARAMETROS DE URL
    Exemplo: ?evento=QGTalent2026&data=27%2F08%2F2026
-   ────────────────────────────────────────── */
+   ------------------------------------------ */
 (function initFromURL() {
   const params = new URLSearchParams(window.location.search);
   const evento = params.get('evento') || 'EQI Talentos';
@@ -801,22 +801,22 @@ const APPS_SCRIPT_URL = https://script.google.com/macros/s/AKfycbzEXhwAVpC4zysj0
   document.getElementById('header-badge').textContent     = label;
   document.getElementById('hero-evento-label').textContent = label;
   document.getElementById('success-evento-label').textContent = label;
-  document.title = `EQI Talentos — ${label}`;
+  document.title = `EQI Talentos - ${label}`;
 })();
 
 function eventoLabel(raw) {
   const map = {
     QGTalent2026:   'QG Talent 2026',
     MoneyWeek2026:  'Money Week 2026',
-    Faculdade:      'Visita Técnica',
+    Faculdade:      'Visita Tecnica',
     CareerFair:     'Feira de Carreiras',
   };
   return map[raw] || raw.replace(/([A-Z])/g,' $1').trim();
 }
 
-/* ──────────────────────────────────────────
-   MÁSCARA WHATSAPP
-   ────────────────────────────────────────── */
+/* ------------------------------------------
+   MASCARA WHATSAPP
+   ------------------------------------------ */
 document.getElementById('field-whatsapp').addEventListener('input', function(e) {
   let v = e.target.value.replace(/\D/g,'').substring(0,11);
   if (v.length > 2) v = '(' + v.substring(0,2) + ') ' + v.substring(2);
@@ -824,9 +824,9 @@ document.getElementById('field-whatsapp').addEventListener('input', function(e) 
   e.target.value = v;
 });
 
-/* ──────────────────────────────────────────
-   VALIDAÇÃO
-   ────────────────────────────────────────── */
+/* ------------------------------------------
+   VALIDACAO
+   ------------------------------------------ */
 function setError(wrapId, has) {
   const el = document.getElementById(wrapId);
   if (el) el.classList.toggle('has-error', has);
@@ -863,9 +863,9 @@ function validate() {
 
 function v(id) { return document.getElementById(id).value; }
 
-/* ──────────────────────────────────────────
+/* ------------------------------------------
    SUBMIT
-   ────────────────────────────────────────── */
+   ------------------------------------------ */
 document.getElementById('talent-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   if (!validate()) {
@@ -905,7 +905,7 @@ document.getElementById('talent-form').addEventListener('submit', async function
     console.warn('Falha no envio (no-cors ignorado):', err);
   }
 
-  // animação de sucesso
+  // animacao de sucesso
   showSuccess();
   btn.disabled = false;
   btn.classList.remove('loading');
